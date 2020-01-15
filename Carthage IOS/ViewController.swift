@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
 
+    @IBOutlet weak var txtview: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func btn(_ sender: Any) {
+        
+        
+        
+    }
+    
 }
 

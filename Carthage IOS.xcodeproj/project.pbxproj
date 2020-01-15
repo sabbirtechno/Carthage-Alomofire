@@ -13,6 +13,7 @@
 		921FB5CF23CDC086008A8297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921FB5CE23CDC086008A8297 /* Assets.xcassets */; };
 		921FB5D223CDC086008A8297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921FB5D023CDC086008A8297 /* LaunchScreen.storyboard */; };
 		921FB5DD23CDC087008A8297 /* Carthage_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921FB5DC23CDC087008A8297 /* Carthage_IOSTests.swift */; };
+		924515CB23CF137F00F9B59D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924515CA23CF137F00F9B59D /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		921FB5D823CDC087008A8297 /* Carthage IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Carthage IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		921FB5DC23CDC087008A8297 /* Carthage_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carthage_IOSTests.swift; sourceTree = "<group>"; };
 		921FB5DE23CDC087008A8297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		924515CA23CF137F00F9B59D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924515CB23CF137F00F9B59D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 				921FB5C623CDC085008A8297 /* Carthage IOS */,
 				921FB5DB23CDC087008A8297 /* Carthage IOSTests */,
 				921FB5C523CDC085008A8297 /* Products */,
+				924515C923CF137F00F9B59D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +98,14 @@
 				921FB5DE23CDC087008A8297 /* Info.plist */,
 			);
 			path = "Carthage IOSTests";
+			sourceTree = "<group>";
+		};
+		924515C923CF137F00F9B59D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				924515CA23CF137F00F9B59D /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +373,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Carthage IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +394,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Carthage IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

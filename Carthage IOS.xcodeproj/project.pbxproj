@@ -14,6 +14,8 @@
 		921FB5D223CDC086008A8297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921FB5D023CDC086008A8297 /* LaunchScreen.storyboard */; };
 		921FB5DD23CDC087008A8297 /* Carthage_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921FB5DC23CDC087008A8297 /* Carthage_IOSTests.swift */; };
 		924515CB23CF137F00F9B59D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924515CA23CF137F00F9B59D /* Alamofire.framework */; };
+		924515D023CF1E6E00F9B59D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924515CF23CF1E6E00F9B59D /* Alamofire.framework */; };
+		924515D123CF1E6E00F9B59D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 924515CF23CF1E6E00F9B59D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 			remoteInfo = "Carthage IOS";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		924515D223CF1E6E00F9B59D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				924515D123CF1E6E00F9B59D /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		921FB5C423CDC085008A8297 /* Carthage IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carthage IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +54,7 @@
 		921FB5DC23CDC087008A8297 /* Carthage_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carthage_IOSTests.swift; sourceTree = "<group>"; };
 		921FB5DE23CDC087008A8297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924515CA23CF137F00F9B59D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		924515CF23CF1E6E00F9B59D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				924515CB23CF137F00F9B59D /* Alamofire.framework in Frameworks */,
+				924515D023CF1E6E00F9B59D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +80,7 @@
 		921FB5BB23CDC085008A8297 = {
 			isa = PBXGroup;
 			children = (
+				924515CF23CF1E6E00F9B59D /* Alamofire.framework */,
 				921FB5C623CDC085008A8297 /* Carthage IOS */,
 				921FB5DB23CDC087008A8297 /* Carthage IOSTests */,
 				921FB5C523CDC085008A8297 /* Products */,
@@ -118,6 +137,8 @@
 				921FB5C023CDC085008A8297 /* Sources */,
 				921FB5C123CDC085008A8297 /* Frameworks */,
 				921FB5C223CDC085008A8297 /* Resources */,
+				924515CC23CF146400F9B59D /* ShellScript */,
+				924515D223CF1E6E00F9B59D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,6 +224,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		924515CC23CF146400F9B59D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		921FB5C023CDC085008A8297 /* Sources */ = {
